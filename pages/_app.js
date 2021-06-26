@@ -36,6 +36,8 @@ class MyApp extends App {
             href='https://res.cloudinary.com/dsbogvjcc/image/upload/v1624716401/StriTech/Mobile-Logo_3x_te2dnx.png'
           />
           <meta property="og:image" content="https://res.cloudinary.com/dsbogvjcc/image/upload/v1624716379/StriTech/Complete-Logo_3x_ti8hxe.png" />
+          <meta name="description" property="og:description" content="Custom Scalable Software, Web & Mobile App Design & Development Services."/>
+          <meta name="keywords" property="og:keywords" content="Software, Web, Mobie, Artificial, Inteligence, Machine, Learning, Data, Science, Development, SAAS, Company, StriTech, Striving, Technologies" />
         </Head>
         <Component {...pageProps} />
       </>
