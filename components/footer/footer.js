@@ -136,7 +136,7 @@ const Footer = () => {
             Email: <a href="mailto:stritechng@gmail.com">stritechng@gmail.com</a>
           </p>
           <p>
-            Phone: <a href="tel:+2349073707630">+2349073707630</a>
+            Phone: <a href="tel:+2348138713174">+2348138713174</a>
           </p>
         </span>
         {footerLinks.map((cat, index) => {

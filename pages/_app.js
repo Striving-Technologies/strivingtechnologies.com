@@ -33,8 +33,9 @@ class MyApp extends App {
           <link
             rel='shortcut icon'
             type='image/x-icon'
-            href='https://res.cloudinary.com/dsbogvjcc/image/upload/v1588628989/StriTech/logo-mobile_kpcxi9.png'
+            href='https://res.cloudinary.com/dsbogvjcc/image/upload/v1624716401/StriTech/Mobile-Logo_3x_te2dnx.png'
           />
+          <meta property="og:image" content="https://res.cloudinary.com/dsbogvjcc/image/upload/v1624716379/StriTech/Complete-Logo_3x_ti8hxe.png" />
         </Head>
         <Component {...pageProps} />
       </>
