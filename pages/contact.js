@@ -35,9 +35,9 @@ export default function contact() {
 
   const sendFeedback = () => {
     const data = {
-      service_id: 'gmail',
-      template_id: 'template_kyYPGRF8',
-      user_id: 'user_OQyWiC5XbcdNYgj5nqbJU',
+      service_id: "gmail",
+      template_id: "template_8gmen1q",
+      user_id: "user_OQyWiC5XbcdNYgj5nqbJU",
       template_params: {
         name: form.name,
         email: form.email,
