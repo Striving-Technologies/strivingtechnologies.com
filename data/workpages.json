@@ -3,7 +3,7 @@
     "id": "furstlegal",
     "slug": "furstlegal",
     "title": "FurstLegal",
-    "clip": "A fresh look for a briliant law firm looking to grow it's client base through the internet.",
+    "clip": "A fresh look for a brilliant law firm looking to find justice for all.",
     "color": "#f9f9f9",
     "backgroundColor": "#303542",
     "images": {
@@ -11,8 +11,8 @@
       "web": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588973918/StriTech/work/furstlegal/furstlegal-web_uyysd7.png",
       "full": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588968720/StriTech/work/furstlegal/furstlegal-full_flyvas.png"
     },
-    "tool": "Legal | React",
-    "problem": "A small law firm needed to gain more clients. They needed a website where cients could guage the experience and what they have to offer.",
+    "tool": "Legal | Website",
+    "problem": "A small law firm needed to gain more clients. They needed a website where clients could gauge the experience and what they have to offer.",
     "steps": [
       [
         "Every project deserves the right tools. We decided to use Next JS, framework know best for rendering static web pages."
@@ -32,98 +32,69 @@
     ]
   },
   {
-    "id": "test0",
-    "slug": "test0",
-    "title": "FurstLegal",
-    "clip": "A fresh look for a briliant law firm",
+    "id": "luxevilla28",
+    "slug": "luxevilla28",
+    "title": "Luxevilla28",
+    "clip": "Telling the story of a luxury for an upcoming hotel. Service at it's finest.",
     "color": "#f9f9f9",
-    "backgroundColor": "#9932CC",
+    "backgroundColor": "#dca73a",
     "images": {
-      "mobile": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588968716/StriTech/work/furstlegal/furstlegal-mobile_l3i2fl.png",
-      "web": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588973918/StriTech/work/furstlegal/furstlegal-web_uyysd7.png",
-      "full": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588968720/StriTech/work/furstlegal/furstlegal-full_flyvas.png"
+      "mobile": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1643751449/StriTech/work/luxevilla28/luxevilla28-mobile_xnkjhw.png",
+      "web": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1643751478/StriTech/work/luxevilla28/luxevilla28-web_pdlwcj.png",
+      "full": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1643751477/StriTech/work/luxevilla28/luxevilla28-full_sv6tsf.png"
     },
-    "tool": "Legal | Web",
-    "problem": "A small law firm needed to gain more clients. They needed a website where cients could guage the experience and what they have to offer.",
+    "tool": "Hotel & Resort | Website",
+    "problem": "An upcoming luxurious hotel needed to get customers for their opening night. They needed a space to tell their story and showcase their work.",
     "steps": [
       [
-        "Every project deserves the right tools. We decided to use Next JS, framework know best for rendering static web pages."
+        "The project was going to have a ton of images so we decided to use Next JS, framework know best for optimizing the rendering of static web pages."
       ],
       [
-        "We deisgned them a simple but catchy front page. We went for a dark theme because it's eye friendly and looks elite (the way a law firm should look).",
+        "We designed them a simple but elegant landing page. We went for a dark theme because it's easy on the eyes and looks elegant (just like our client).",
         "We added an easily accessible navigation bar which links to all the major pages of the website."
       ],
       [
-        "Each page was straight to the point and easy to read. The law is often straight forward, so should the site",
+        "Each page was well designed and unique. The hotel had a lot to say and we needed give the user that unique experience.",
         "Next up was to use to make sure each page was responsive on mobile screens. We test it on various phone sizes to ensure consistency."
       ],
       [
-        "Finally we host the site on Netlify, which enables us to use the continuous development feature.",
-        "This means we can make changes to the site and have them automatically added to the already deployed site."
+        "Finally we host the site on Vercel which is specially built to deploy and render NextJS applications efficiently."
       ]
     ]
   },
   {
-    "id": "test1",
-    "slug": "test1",
-    "title": "FurstLegal",
-    "clip": "A fresh look for a briliant law firm",
+    "id": "bexl-capital",
+    "slug": "bexl-capital",
+    "title": "Bexl Capital",
+    "clip": "Digital asset management brought to life. Invest in the future.",
     "color": "#f9f9f9",
-    "backgroundColor": "rgb(255,0,255)",
+    "backgroundColor": "#1B432F",
     "images": {
-      "mobile": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588968716/StriTech/work/furstlegal/furstlegal-mobile_l3i2fl.png",
-      "web": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588973918/StriTech/work/furstlegal/furstlegal-web_uyysd7.png",
-      "full": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588968720/StriTech/work/furstlegal/furstlegal-full_flyvas.png"
+      "mobile": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1643755044/StriTech/work/luxevilla28/bexl-capital-mobile_td9osp.png",
+      "web": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1643755044/StriTech/work/luxevilla28/bexl-capital-web_weeihb.png",
+      "full": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1643755045/StriTech/work/luxevilla28/bexl-capital-full_zqtnee.png"
     },
-    "tool": "Legal | Web",
-    "problem": "A small law firm needed to gain more clients. They needed a website where cients could guage the experience and what they have to offer.",
+    "tool": "Finance | Website",
+    "problem": "An emerging digital asset management firm was looking to make their place in the world and what better way to do so than to tell your story on the internet. The needed an interactive and well designed website where customers could learn about them and what they do.",
     "steps": [
       [
-        "Every project deserves the right tools. We decided to use Next JS, framework know best for rendering static web pages."
+        "From the very onset they told us they have a lot of media content to be put on the site. These involved game trailers and crystal clear slideshows.",
+        "To accomplish this we went with our favour tool ever... you guess it! NextJS! It have crazy image optimization techniques."
       ],
       [
-        "We deisgned them a simple but catchy front page. We went for a dark theme because it's eye friendly and looks elite (the way a law firm should look).",
-        "We added an easily accessible navigation bar which links to all the major pages of the website."
+        "We designed a very simple and modern landing page. As you've noticed we love dark themes and wanted to go for that but the client insisted on a light theme which we agreed to. We made sure to still convey the essence of the digital space and gaming.",
+        "We also added an easily accessible navigation bar which links to all the major pages of the website."
       ],
       [
-        "Each page was straight to the point and easy to read. The law is often straight forward, so should the site",
+        "Each page had it's own look and feel as they were all largely different from one another. We tried to set the tone and mood for each page to further enhance and enrich the user experience.",
         "Next up was to use to make sure each page was responsive on mobile screens. We test it on various phone sizes to ensure consistency."
       ],
       [
-        "Finally we host the site on Netlify, which enables us to use the continuous development feature.",
-        "This means we can make changes to the site and have them automatically added to the already deployed site."
-      ]
-    ]
-  },
-  {
-    "id": "test2",
-    "slug": "test2",
-    "title": "FurstLegal",
-    "clip": "A fresh look for a briliant law firm",
-    "color": "#f9f9f9",
-    "backgroundColor": "#000000",
-    "images": {
-      "mobile": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588968716/StriTech/work/furstlegal/furstlegal-mobile_l3i2fl.png",
-      "web": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588973918/StriTech/work/furstlegal/furstlegal-web_uyysd7.png",
-      "full": "https://res.cloudinary.com/dsbogvjcc/image/upload/v1588968720/StriTech/work/furstlegal/furstlegal-full_flyvas.png"
-    },
-    "tool": "Legal | Web",
-    "problem": "A small law firm needed to gain more clients. They needed a website where cients could guage the experience and what they have to offer.",
-    "steps": [
-      [
-        "Every project deserves the right tools. We decided to use Next JS, framework know best for rendering static web pages."
+        "They also needed a blog section where they would post educational content about about the digital asset space, enabling their user to learn about what it is they're investing in.",
+        "This was great because choosing NextJS allowed us create dynamic pages without stress. The blogs were created and managed on a light weight CMS tool called Strapi (which we customised and deployed ourselves), we also used MongoDB Atlas (a multi-cloud database service) for the storing of the post."
       ],
       [
-        "We deisgned them a simple but catchy front page. We went for a dark theme because it's eye friendly and looks elite (the way a law firm should look).",
-        "We added an easily accessible navigation bar which links to all the major pages of the website."
-      ],
-      [
-        "Each page was straight to the point and easy to read. The law is often straight forward, so should the site",
-        "Next up was to use to make sure each page was responsive on mobile screens. We test it on various phone sizes to ensure consistency."
-      ],
-      [
-        "Finally we host the site on Netlify, which enables us to use the continuous development feature.",
-        "This means we can make changes to the site and have them automatically added to the already deployed site."
+        "Finally we host the site on Vercel which is specially built to deploy and render NextJS applications efficiently."
       ]
     ]
   }
