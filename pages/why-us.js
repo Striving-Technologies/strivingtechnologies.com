@@ -157,7 +157,7 @@ export default function services() {
 							</div>
 						</div>
 					</section> */}
-          <section className={styles.section}>
+          {/* <section className={styles.section}>
             <div className={styles.block}>
               <h1 className={styles.title} style={{ marginBottom: '20px', fontSize: '30px' }}>
                 Our Leadership
@@ -178,7 +178,7 @@ export default function services() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
     </MainLayout>
