@@ -54,9 +54,10 @@ const Home = () => {
           <div>
             <InteractiveLink
               href="/#contact"
-              className="px-4 py-3 rounded-3xl border border-white bg-black hover:bg-primary hover:border-black hover:text-black"
+              className="px-4 py-3 text-xl flex items-center gap-4 rounded-full border border-white bg-black hover:bg-primary hover:border-black hover:text-black"
             >
               Let's connect
+              <ArrowIcon className="h-4 w-auto" />
             </InteractiveLink>
           </div>
         </section>
