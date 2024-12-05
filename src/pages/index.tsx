@@ -1,4 +1,4 @@
-import { AboutStats, ServicesList } from "@/components/landing";
+import { AboutStats, ProjectList, ServicesList } from "@/components/landing";
 import MainLayout from "@/components/mainlayout";
 import { AnimatedText, InteractiveLink } from "@/components/shared";
 import { ArrowIcon, BarcodeIcon } from "@/icons";
@@ -100,6 +100,37 @@ const Home = () => {
             </div>
           </div>
           <ServicesList />
+        </div>
+      </section>
+      <section className="px-[4.5rem] py-20">
+        <div className="mb-20">
+          <h2 className="bruno-ace text-primary flex items-center h-min gap-2 justify-center mb-10">
+            <BarcodeIcon className="w-5 h-auto" /> Client Work
+          </h2>
+          <h3 className="text-8xl text-center text-white mb-5">
+            <span className="arapey-regular-italic font-semibold">
+              Featured
+            </span>{" "}
+            Projects!
+          </h3>
+          <p className="text-center text-sm">
+            Discover our range of innovative products carefully crafted for each
+            of our customers to unlock their potential. <br />
+            Each product is thoughtfully designed to deliver outstanding
+            results.
+          </p>
+        </div>
+        <div className="w-full">
+          <ProjectList />
+          <div className="flex justify-center">
+            <InteractiveLink
+              href="/projects"
+              className="px-4 py-3 text-xl flex items-center gap-4 rounded-full border w-min whitespace-nowrap border-white bg-black hover:bg-primary hover:border-black hover:text-black"
+            >
+              View More
+              <ArrowIcon className="h-4 w-auto" />
+            </InteractiveLink>
+          </div>
         </div>
       </section>
     </MainLayout>

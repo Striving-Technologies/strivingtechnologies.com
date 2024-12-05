@@ -44,8 +44,8 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="px-[4.5rem] pt-20 w-full">
-      <div className="w-full grid grid-cols-3">
+    <footer className="pt-20 w-full">
+      <div className="w-full grid grid-cols-3 px-[4.5rem]">
         <div className="h-full flex flex-col justify-between">
           <div>
             <h4 className="uppercase">Company</h4>
@@ -121,7 +121,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full mt-20">
+      <div className="w-full mt-20 px-2">
         <Image
           src="/images/logo-3x.png"
           width={2928}
