@@ -2,13 +2,15 @@ import { GlobalContext } from "@/context/global";
 import { motion, useSpring } from "framer-motion";
 import React, { useContext, useEffect, useState } from "react";
 import Footer from "../footer/footer";
-import Nav from "../navbar/nav";
+import { FloatingMenu, MobileNav, Nav } from "../navbar/nav";
 
 export default function MainLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [showFloatingMenu, setShowFloatingMenu] = useState(false);
+  const [showMobileNav, setShowMobileNav] = useState(false);
   const { overInteractive, clickingInteractive } = useContext(GlobalContext);
 
   const overInteractiveRef = React.useRef(overInteractive);
@@ -70,9 +72,37 @@ export default function MainLayout({
     }
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        setShowFloatingMenu(true);
+      } else {
+        setShowFloatingMenu(false);
+      }
+    });
+
+    return () => {
+      window.removeEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          setShowFloatingMenu(true);
+        } else {
+          setShowFloatingMenu(false);
+        }
+      });
+    };
+  }, []);
+
   return (
     <div className="w-full max-w-[2000px] mx-auto min-h-screen flex flex-col">
       <Nav />
+      <MobileNav
+        show={showMobileNav}
+        close={() => setShowMobileNav(false)}
+      />
+      <FloatingMenu
+        visible={showFloatingMenu}
+        toggleShow={() => setShowMobileNav((value) => !value)}
+      />
       <main className="flex-grow w-full h-full">{children}</main>
       <Footer />
       <motion.div

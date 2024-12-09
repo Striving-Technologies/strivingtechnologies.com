@@ -13,6 +13,10 @@
   --gold: #c07f00;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #000;
   color: var(--mono-grey);
@@ -79,6 +83,10 @@ body {
   background: linear-gradient(rgba(31, 31, 31, 1), rgba(31, 31, 31, 0));
 }
 
+.grey-gradient-reverse {
+  background: linear-gradient(rgba(31, 31, 31, 0), rgba(31, 31, 31, 1));
+}
+
 .grey-gradient-round {
   background: linear-gradient(#1f1f1f, #000000, #1f1f1f);
 }
@@ -96,5 +104,23 @@ body {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+.input-default {
+  background: none;
+  border: rgba(153, 153, 153, 0.5) 1px solid;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+
+  &::placeholder {
+    color: rgba(153, 153, 153, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+    border: #fff 1px solid;
   }
 }

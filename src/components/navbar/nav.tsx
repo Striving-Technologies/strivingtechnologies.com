@@ -1,15 +1,16 @@
 import { InteractiveLink } from "@/components/shared";
-import work from "@/data/workpages.json";
-import { EmailIcon } from "@/icons";
+import work from "@/data/work-pages.json";
+import { CloseIcon, EmailIcon, MenuIcon } from "@/icons";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 const links = [
   { href: "/#home", label: "Home" },
-  { href: "/#projects", label: "Projects", extra: work.length },
+  { href: "/#work", label: "Work", extra: work.length },
   { href: "/#services", label: "Services" },
 ];
 
-const Nav = () => {
+export const Nav = () => {
   return (
     <nav className="flex justify-between items-center py-5 px-[4.5rem]">
       <InteractiveLink
@@ -64,4 +65,91 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export const MobileNav = (props: { show: boolean; close: () => void }) => {
+  const closeMenuRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (props.show) {
+      closeMenuRef.current?.focus();
+    }
+  }, [props.show]);
+  return (
+    <nav
+      className={`p-10 fixed z-[11] w-screen max-w-xl h-screen grey-gradient-round flex flex-col transition-all duration-500 ${
+        props.show ? "right-0" : "-right-full"
+      } tab:max-w-none`}
+    >
+      <div className="flex justify-between items-center">
+        <ul className="flex flex-col gap-2 text-sm">
+          <li className="nav-link text-white relative hover:text-primary">
+            <InteractiveLink href="mailto:stritechng@gmail.com">
+              E:stritechng@gmail.com
+            </InteractiveLink>
+          </li>
+          <li className="nav-link text-white relative hover:text-primary">
+            <InteractiveLink href="tel:(+234) 906 201 8396">
+              T:(+234) 906 201 8396
+            </InteractiveLink>
+          </li>
+        </ul>
+        <InteractiveLink>
+          <button
+            onClick={props.close}
+            className="text-white rounded-full border border-transparent hover:border-white"
+            aria-label="Close Menu"
+            ref={closeMenuRef}
+          >
+            <CloseIcon className="w-12 h-auto text-white" />
+          </button>
+        </InteractiveLink>
+      </div>
+      <div className="flex-grow flex items-center">
+        <ul className="flex flex-col gap-16 uppercase text-xl">
+          {links.map((link) => (
+            <li
+              key={link.href}
+              className="nav-link w-min whitespace-nowrap relative group text-white hover:text-primary"
+            >
+              <InteractiveLink
+                href={link.href}
+                className="flex items-end"
+                wrapperType="link"
+              >
+                {link.label}
+                {link.extra && (
+                  <>
+                    &nbsp;
+                    <span className="text-xs mb-0.5 group-hover:text-white">
+                      ({link.extra})
+                    </span>
+                  </>
+                )}
+              </InteractiveLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+  );
+};
+
+export const FloatingMenu = (props: {
+  visible: boolean;
+  toggleShow: () => void;
+}) => {
+  return (
+    <div
+      className={`fixed top-20 right-20 z-10 transition-all duration-500 ${
+        props.visible ? "scale-100" : "scale-0"
+      }`}
+    >
+      <InteractiveLink
+        className="p-1 text-xl flex items-center rounded-full border text-white border-white bg-black cursor-pointer hover:bg-primary hover:border-black hover:text-black"
+        onClick={props.toggleShow}
+        aria-label="Toggle Menu"
+      >
+        <MenuIcon className="h-12 w-auto" />
+      </InteractiveLink>
+    </div>
+  );
+};

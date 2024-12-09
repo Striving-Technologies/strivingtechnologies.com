@@ -1,7 +1,10 @@
 import { ArrowIcon } from "@/icons";
+import { motion, useAnimation, useInView } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { InteractiveLink } from "../shared";
+
+const MotionLink = motion(Image);
 
 const Footer = () => {
   const companyLinks = [
@@ -43,6 +46,42 @@ const Footer = () => {
     setPath(window.location.pathname);
   }, []);
 
+  const reachOutControls = useAnimation();
+  const reachOutRef = useRef(null);
+  const reachOutInView = useInView(reachOutRef, { amount: 0.8 });
+
+  const logoControls = useAnimation();
+  const logoRef = useRef(null);
+  const logoInView = useInView(logoRef, { amount: 0.2 });
+
+  useEffect(() => {
+    if (reachOutInView) {
+      reachOutControls.start("visible");
+    } else {
+      reachOutControls.start("hidden");
+    }
+  }, [reachOutInView]);
+
+  useEffect(() => {
+    if (logoInView) {
+      logoControls.start("visible");
+    } else {
+      logoControls.start("hidden");
+    }
+  }, [logoInView]);
+
+  const animation = {
+    hidden: {
+      translateY: 100,
+    },
+    visible: {
+      translateY: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <footer className="pt-20 w-full">
       <div className="w-full grid grid-cols-3 px-[4.5rem]">
@@ -72,20 +111,33 @@ const Footer = () => {
             All Rights Reserved
           </p>
         </div>
-        <div>
+        <motion.div
+          ref={reachOutRef}
+          animate={reachOutControls}
+        >
           <h3 className="uppercase mx-auto w-min whitespace-nowrap">
             Reach Out To Us
           </h3>
-          <p className="nav-link text-3xl relative w-min whitespace-nowrap mx-auto text-white mt-5 hover:text-primary">
-            <InteractiveLink href="tel:(+234) 0906 201 8396">
-              (+234) 0906 201 8396
-            </InteractiveLink>
-          </p>
-          <p className="nav-link text-3xl relative w-min whitespace-nowrap mx-auto text-white mt-5 hover:text-primary">
-            <InteractiveLink href="mailto:stritechng@gmail.com">
-              stritechng@gmail.com
-            </InteractiveLink>
-          </p>
+          <div className="overflow-hidden">
+            <motion.p
+              className="nav-link text-3xl relative w-min whitespace-nowrap mx-auto text-white mt-5 hover:text-primary"
+              variants={animation}
+            >
+              <InteractiveLink href="tel:(+234) 0906 201 8396">
+                (+234) 0906 201 8396
+              </InteractiveLink>
+            </motion.p>
+          </div>
+          <div className="overflow-hidden">
+            <motion.p
+              className="nav-link text-3xl relative w-min whitespace-nowrap mx-auto text-white mt-5 hover:text-primary"
+              variants={animation}
+            >
+              <InteractiveLink href="mailto:stritechng@gmail.com">
+                stritechng@gmail.com
+              </InteractiveLink>
+            </motion.p>
+          </div>
           <div className="mt-20">
             <p className="flex justify-center">
               <InteractiveLink
@@ -97,7 +149,7 @@ const Footer = () => {
               </InteractiveLink>
             </p>
           </div>
-        </div>
+        </motion.div>
         <div className="flex justify-end">
           <div>
             <h4 className="uppercase">Socials</h4>
@@ -121,15 +173,20 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-full mt-20 px-2">
-        <Image
+      <motion.div
+        className="w-full mt-20 px-2 overflow-hidden"
+        ref={logoRef}
+        animate={logoControls}
+      >
+        <MotionLink
           src="/images/logo-3x.png"
           width={2928}
           height={768}
           alt="Striving Technologies Logo"
           className="w-full h-auto"
+          variants={animation}
         />
-      </div>
+      </motion.div>
     </footer>
   );
 };

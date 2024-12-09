@@ -1,0 +1,91 @@
+[
+  {
+    "id": "dev.ochuko.space",
+    "slug": "dev-ochuko-space",
+    "title": "Ochuko 'Folio 24 — Creative Engineer",
+    "clip": "A personal portfolio for a creative engineer. A place to showcase his work and tell his story.",
+    "color": "#DAD6CA",
+    "backgroundColor": "#111111",
+    "images": ["/images/work/luxevilla28-mockup-1.png"],
+    "tool": "Creative | Engineer | Portfolio",
+    "service": "Web Engineering | Brand Identity",
+    "problem": "A small law firm needed to gain more clients. They needed a website where clients could gauge the experience and what they have to offer.",
+    "steps": [
+      [
+        "Every project deserves the right tools. We decided to use Next JS, framework know best for rendering static web pages."
+      ],
+      [
+        "We deisgned them a simple but catchy front page. We went for a dark theme because it's eye friendly and looks elite (the way a law firm should look).",
+        "We added an easily accessible navigation bar which links to all the major pages of the website."
+      ],
+      [
+        "Each page was straight to the point and easy to read. The law is often straight forward, so should the site",
+        "Next up was to use to make sure each page was responsive on mobile screens. We test it on various phone sizes to ensure consistency."
+      ],
+      [
+        "Finally we host the site on Netlify, which enables us to use the continuous development feature.",
+        "This means we can make changes to the site and have them automatically added to the already deployed site."
+      ]
+    ],
+    "releaseDate": "January, 2024"
+  },
+  {
+    "id": "furstlegal",
+    "slug": "furstlegal",
+    "title": "FurstLegal",
+    "clip": "A fresh look for a brilliant law firm looking to find justice for all.",
+    "color": "#f9f9f9",
+    "backgroundColor": "#303542",
+    "images": ["/images/work/luxevilla28-mockup-1.png"],
+    "tool": "Legal | Website",
+    "service": "Brand Identity | UI/UX Design | Web Engineering",
+    "problem": "A small law firm needed to gain more clients. They needed a website where clients could gauge the experience and what they have to offer.",
+    "steps": [
+      [
+        "Every project deserves the right tools. We decided to use Next JS, framework know best for rendering static web pages."
+      ],
+      [
+        "We deisgned them a simple but catchy front page. We went for a dark theme because it's eye friendly and looks elite (the way a law firm should look).",
+        "We added an easily accessible navigation bar which links to all the major pages of the website."
+      ],
+      [
+        "Each page was straight to the point and easy to read. The law is often straight forward, so should the site",
+        "Next up was to use to make sure each page was responsive on mobile screens. We test it on various phone sizes to ensure consistency."
+      ],
+      [
+        "Finally we host the site on Netlify, which enables us to use the continuous development feature.",
+        "This means we can make changes to the site and have them automatically added to the already deployed site."
+      ]
+    ],
+    "releaseDate": "May, 2021"
+  },
+  {
+    "id": "luxevilla28",
+    "slug": "luxevilla28",
+    "title": "Luxevilla28",
+    "clip": "Telling the story of luxury for an upcoming hotel. Service at it's finest.",
+    "color": "#f9f9f9",
+    "backgroundColor": "#dca73a",
+    "images": ["/images/work/luxevilla28-mockup-1.png"],
+    "tool": "Hotel & Resort | Website",
+    "service": "Brand Identity | UI/UX Design | Web Engineering",
+    "problem": "An upcoming luxurious hotel needed to get customers for their opening night. They needed a space to tell their story and showcase their work.",
+    "steps": [
+      [
+        "The project was going to have a ton of images so we decided to use Next JS, framework know best for optimizing the rendering of static web pages."
+      ],
+      [
+        "We designed them a simple but elegant landing page. We went for a dark theme because it's easy on the eyes and looks elegant (just like our client).",
+        "We added an easily accessible navigation bar which links to all the major pages of the website."
+      ],
+      [
+        "Each page was well designed and unique. The hotel had a lot to say and we needed give the user that unique experience.",
+        "Next up was to use to make sure each page was responsive on mobile screens. We test it on various phone sizes to ensure consistency."
+      ],
+      [
+        "Finally we host the site on Vercel which is specially built to deploy and render NextJS applications efficiently."
+      ]
+    ],
+    "releaseDate": "September, 2020"
+  }
+]

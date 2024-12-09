@@ -1,8 +1,14 @@
-import { AboutStats, ProjectList, ServicesList } from "@/components/landing";
+import {
+  AboutStats,
+  ContactForm,
+  ProjectList,
+  ServicesList,
+} from "@/components/landing";
 import MainLayout from "@/components/mainlayout";
 import { AnimatedText, InteractiveLink } from "@/components/shared";
 import { ArrowIcon, BarcodeIcon } from "@/icons";
 import Head from "next/head";
+import Image from "next/image";
 import { useEffect } from "react";
 
 const Home = () => {
@@ -23,24 +29,35 @@ const Home = () => {
         <title>Home | StriTech</title>
       </Head>
       <div className="px-[4.5rem] py-20 min-h-screen flex flex-col justify-between">
-        <section className="max-w-[500px]">
-          <p className="text-sm">
-            “ At Striving Technologies, we see creativity as the driving force
-            behind innovation. As a full-service creative agency, we transform
-            forward-thinking ideas into extraordinary solutions.
-          </p>
-          <p className="text-sm mt-2">
-            In developing a brand identity, creating a user-friendly website, or
-            In our journey of crafting brand identities, designing user-friendly
-            websites, and launching dynamic marketing campaigns, we invest every
-            project with unwavering dedication and a spirited enthusiasm that
-            inspires greatness. ”
-          </p>
-          <div className="text-white italic mt-5">
-            <p>Ochuko P</p>
-            <p>Creative Director</p>
+        <div className="w-full flex justify-between">
+          <section className="max-w-[500px] w-full">
+            <p className="text-sm">
+              “ At Striving Technologies, we see creativity as the driving force
+              behind innovation. As a full-service creative agency, we transform
+              forward-thinking ideas into extraordinary solutions.
+            </p>
+            <p className="text-sm mt-2">
+              In developing a brand identity, creating a user-friendly website,
+              or In our journey of crafting brand identities, designing
+              user-friendly websites, and launching dynamic marketing campaigns,
+              we invest every project with unwavering dedication and a spirited
+              enthusiasm that inspires greatness. ”
+            </p>
+            <div className="text-white italic mt-5">
+              <p>Ochuko P</p>
+              <p>Creative Director</p>
+            </div>
+          </section>
+          <div>
+            <Image
+              className="max-w-[38rem] service-image"
+              src="/images/dark-blob-tinted.avif"
+              width={1024}
+              height={986}
+              alt="Dark Blob"
+            />
           </div>
-        </section>
+        </div>
         <section className="flex w-full justify-between items-end">
           <div className="text-[6rem]">
             <h1 className="arapey-regular-italic -mb-12 italic text-secondary">
@@ -62,7 +79,10 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <section className="px-[4.5rem] py-20 grey-gradient">
+      <section
+        className="px-[4.5rem] py-20 grey-gradient"
+        id="about-us"
+      >
         <div className="flex gap-10 justify-between">
           <h2 className="bruno-ace text-primary flex items-center h-min gap-2">
             <BarcodeIcon className="w-5 h-auto" /> About Us
@@ -76,7 +96,10 @@ const Home = () => {
         </div>
         <AboutStats />
       </section>
-      <section className="py-20 mt-10">
+      <section
+        className="py-20 mt-10"
+        id="services"
+      >
         <div className="flex gap-10 justify-between px-[4.5rem]">
           <h2 className="bruno-ace text-primary flex items-center h-min gap-2">
             <BarcodeIcon className="w-5 h-auto" /> Our Services
@@ -102,7 +125,10 @@ const Home = () => {
           <ServicesList />
         </div>
       </section>
-      <section className="px-[4.5rem] py-20">
+      <section
+        className="px-[4.5rem] py-20"
+        id="work"
+      >
         <div className="mb-20">
           <h2 className="bruno-ace text-primary flex items-center h-min gap-2 justify-center mb-10">
             <BarcodeIcon className="w-5 h-auto" /> Client Work
@@ -130,6 +156,36 @@ const Home = () => {
               View More
               <ArrowIcon className="h-4 w-auto" />
             </InteractiveLink>
+          </div>
+        </div>
+      </section>
+      <section
+        className="px-[4.5rem] py-20 grey-gradient-reverse"
+        id="contact"
+      >
+        <div className="w-full grid grid-cols-2 gap-10">
+          <div>
+            <h1 className="text-8xl text-primary mb-10">
+              Let's{" "}
+              <span className="arapey-regular-italic bg-gradient-to-r from-primary to-[#8C764A] text-transparent bg-clip-text">
+                Connect
+              </span>
+            </h1>
+            <p className="text-sm max-w-md italic text-white mb-10">
+              Whether you have a question, or want to discuss a potential
+              project, our team at StriTech is here to help. Please fill out the
+              form below and we will get back to you as soon as possible.
+            </p>
+            <ContactForm />
+          </div>
+          <div className="w-full flex items-center h-full justify-center">
+            <Image
+              className="max-w-lg service-image"
+              src="/images/dark-blob.avif"
+              width={1024}
+              height={986}
+              alt="Dark Blob"
+            />
           </div>
         </div>
       </section>
