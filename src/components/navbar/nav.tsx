@@ -12,7 +12,7 @@ const links = [
 
 export const Nav = () => {
   return (
-    <nav className="flex justify-between items-center py-5 px-[4.5rem]">
+    <nav className="flex justify-between items-center py-5 px-[4.5rem] lg-tab:px-8">
       <InteractiveLink
         href="/"
         wrapperType="link"
@@ -25,7 +25,7 @@ export const Nav = () => {
           height={256}
         />
       </InteractiveLink>
-      <ul className="flex gap-16 uppercase text-sm">
+      <ul className="flex gap-16 uppercase text-sm lg-tab:hidden">
         {links.map((link) => (
           <li
             key={link.href}
@@ -49,7 +49,7 @@ export const Nav = () => {
           </li>
         ))}
       </ul>
-      <ul className="flex gap-16">
+      <ul className="flex gap-16 lg-tab:hidden">
         <li className="nav-link relative text-sm hover:text-primary">
           <InteractiveLink href="tel:(+234) 906 201 8396">
             (+234) 906 201 8396
@@ -139,8 +139,8 @@ export const FloatingMenu = (props: {
 }) => {
   return (
     <div
-      className={`fixed top-20 right-20 z-10 transition-all duration-500 ${
-        props.visible ? "scale-100" : "scale-0"
+      className={`fixed top-20 right-20 z-10 transition-all duration-500 lg-tab:top-5 lg-tab:right-8 ${
+        props.visible ? "scale-100" : "scale-0 lg-tab:scale-100"
       }`}
     >
       <InteractiveLink

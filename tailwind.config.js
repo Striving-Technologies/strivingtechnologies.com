@@ -11,6 +11,9 @@ module.exports = {
         "mono-grey-dark": "var(--mono-grey-dark)",
       },
       screens: {
+        "sm-laptop": { max: "1200px" },
+        // => @media (max-width: 1200px) { ... }
+
         "lg-tab": { max: "1024px" },
         // => @media (max-width: 1024px) { ... }
 

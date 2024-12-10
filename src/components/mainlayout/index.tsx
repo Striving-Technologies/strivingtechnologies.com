@@ -15,7 +15,6 @@ export default function MainLayout({
 
   const overInteractiveRef = React.useRef(overInteractive);
 
-  const [mouseFollow, setMouseFollow] = useState({ x: 0, y: 0 });
   const smoothOptions = { damping: 15, stiffness: 100 };
   const mouse = {
     x: useSpring(0, smoothOptions),

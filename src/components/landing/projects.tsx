@@ -16,11 +16,11 @@ export const ProjectList = () => {
           >
             <div className={`p-4 grey-gradient-round rounded-3xl`}>
               <Image
-                src={project.images[0]}
-                width={2048}
-                height={1026}
+                src={project.images[0].url}
+                width={project.images[0].width}
+                height={project.images[0].height}
                 className="w-full h-auto rounded-xl"
-                alt={project.title}
+                alt={project.images[0].alt}
               />
               <div className="flex justify-around pt-8 pb-2">
                 <div>

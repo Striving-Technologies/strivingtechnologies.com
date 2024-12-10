@@ -28,9 +28,9 @@ const Home = () => {
       <Head>
         <title>Home | StriTech</title>
       </Head>
-      <div className="px-[4.5rem] py-20 min-h-screen flex flex-col justify-between">
-        <div className="w-full flex justify-between">
-          <section className="max-w-[500px] w-full">
+      <div className="px-[4.5rem] py-20 min-h-screen flex flex-col justify-between relative overflow-hidden tab:px-8">
+        <div className="w-full flex justify-between z-[2] tab:flex-grow">
+          <section className="max-w-[500px] w-full lg-tab:max-w-xs">
             <p className="text-sm">
               “ At Striving Technologies, we see creativity as the driving force
               behind innovation. As a full-service creative agency, we transform
@@ -50,7 +50,7 @@ const Home = () => {
           </section>
           <div>
             <Image
-              className="max-w-[38rem] service-image"
+              className="max-w-xl service-image sm-laptop:max-w-lg lg-tab:max-w-md tab:absolute tab:-right-1/3 phone:-right-2/3"
               src="/images/dark-blob-tinted.avif"
               width={1024}
               height={986}
@@ -58,17 +58,19 @@ const Home = () => {
             />
           </div>
         </div>
-        <section className="flex w-full justify-between items-end">
-          <div className="text-[6rem]">
-            <h1 className="arapey-regular-italic -mb-12 italic text-secondary">
-              Creativity
-            </h1>
-            <div className="flex gap-4 -mb-10">
+        <section className="flex w-full justify-between items-end flex-wrap gap-4">
+          <div className="text-8xl lg-tab:text-7xl">
+            <div className="-mb-6 lg-tab:mb-5">
+              <h1 className="arapey-regular-italic  italic text-secondary">
+                Creativity
+              </h1>
+            </div>
+            <div className="flex gap-4 -mb-10 flex-wrap">
               <h1>Meets</h1>
               <h1 className="text-primary italic">Innovation</h1>
             </div>
           </div>
-          <div>
+          <div className="mt-20 ml-auto">
             <InteractiveLink
               href="/#contact"
               className="px-4 py-3 text-xl flex items-center gap-4 rounded-full border border-white bg-black hover:bg-primary hover:border-black hover:text-black"
@@ -146,9 +148,9 @@ const Home = () => {
             results.
           </p>
         </div>
-        <div className="w-full">
+        <div className="w-full mb-20">
           <ProjectList />
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <InteractiveLink
               href="/projects"
               className="px-4 py-3 text-xl flex items-center gap-4 rounded-full border w-min whitespace-nowrap border-white bg-black hover:bg-primary hover:border-black hover:text-black"
@@ -156,7 +158,7 @@ const Home = () => {
               View More
               <ArrowIcon className="h-4 w-auto" />
             </InteractiveLink>
-          </div>
+          </div> */}
         </div>
       </section>
       <section
