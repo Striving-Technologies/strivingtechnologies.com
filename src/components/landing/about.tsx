@@ -41,7 +41,7 @@ export const AboutStats = () => {
 
   const controls = useAnimation();
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.8, once: true });
+  const isInView = useInView(ref, { amount: 0.1, once: true });
 
   useEffect(() => {
     if (isInView) {
