@@ -36,7 +36,7 @@ export const ContactForm = () => {
         required
         onChange={handleChange}
       />
-      <div className="flex gap-4">
+      <div className="flex gap-4 phone:flex-col phone:gap-8">
         <input
           className="input-default"
           name="email"
@@ -64,7 +64,7 @@ export const ContactForm = () => {
       />
       <InteractiveLink>
         <button
-          className="input-default !w-min whitespace-nowrap flex items-center gap-4 !rounded-full hover:bg-primary hover:text-black focus:border-white"
+          className="input-default !w-min whitespace-nowrap flex items-center gap-4 !rounded-full phone:!w-full phone:justify-between hover:bg-primary hover:text-black focus:border-white"
           type="submit"
         >
           Let's connect

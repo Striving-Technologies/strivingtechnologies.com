@@ -47,7 +47,7 @@ export const ServicesList = () => {
       },
     },
     {
-      title: "SEO/Marketing",
+      title: "SEO / Marketing",
       icon: "/images/service-seo-marketing-icon.svg",
       features: [
         "I. Search Engine Optimization",
@@ -67,10 +67,10 @@ export const ServicesList = () => {
       {services.map((service, index) => (
         <div
           key={index}
-          className="w-full transition-all duration-500 cursor-default group hover:text-white hover:bg-mono-grey-dark"
+          className="w-full transition-all duration-500 cursor-default group tab:text-white hover:text-white hover:bg-mono-grey-dark tab:hover:bg-transparent"
         >
-          <div className="grid grid-cols-3 gap-10 px-16 py-12 max-w-7xl mx-auto">
-            <div className="flex gap-5 items-center h-min">
+          <div className="grid grid-cols-3 gap-10 px-16 py-12 max-w-7xl mx-auto tab:grid-cols-2 tab:px-8 phone:grid-cols-1 phone:px-4">
+            <div className="flex gap-5 items-center h-min tab:gap-2 phone:-ml-2">
               <img
                 src={service.icon}
                 alt={service.title}
@@ -79,7 +79,7 @@ export const ServicesList = () => {
               <h1 className="text-3xl">{service.title}</h1>
             </div>
             <div>
-              <ul>
+              <ul className="m-0">
                 {service.features.map((feature, index) => (
                   <li
                     key={index}
@@ -90,7 +90,7 @@ export const ServicesList = () => {
                 ))}
               </ul>
             </div>
-            <div className="relative">
+            <div className="relative tab:hidden">
               <Image
                 src={service.image.src}
                 width={service.image.width}

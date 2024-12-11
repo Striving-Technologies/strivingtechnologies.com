@@ -12,7 +12,7 @@ const links = [
 
 export const Nav = () => {
   return (
-    <nav className="flex justify-between items-center py-5 px-[4.5rem] lg-tab:px-8">
+    <nav className="flex justify-between items-center py-5 px-[4.5rem] tab:px-8 phone:px-4">
       <InteractiveLink
         href="/"
         wrapperType="link"
@@ -99,7 +99,7 @@ export const MobileNav = (props: { show: boolean; close: () => void }) => {
             aria-label="Close Menu"
             ref={closeMenuRef}
           >
-            <CloseIcon className="w-12 h-auto text-white" />
+            <CloseIcon className="h-12 w-auto text-white tab:h-7" />
           </button>
         </InteractiveLink>
       </div>
@@ -148,7 +148,7 @@ export const FloatingMenu = (props: {
         onClick={props.toggleShow}
         aria-label="Toggle Menu"
       >
-        <MenuIcon className="h-12 w-auto" />
+        <MenuIcon className="h-12 w-auto tab:h-7" />
       </InteractiveLink>
     </div>
   );

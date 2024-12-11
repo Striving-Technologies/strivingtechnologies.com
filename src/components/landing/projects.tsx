@@ -14,29 +14,34 @@ export const ProjectList = () => {
             href={`/client-work/${project.slug}`}
             wrapperType="link"
           >
-            <div className={`p-4 grey-gradient-round rounded-3xl`}>
+            <div className={`p-4 grey-gradient-round rounded-2xl phone:p-2`}>
               <Image
                 src={project.images[0].url}
                 width={project.images[0].width}
                 height={project.images[0].height}
-                className="w-full h-auto rounded-xl"
+                className="w-full h-auto rounded-t-xl"
                 alt={project.images[0].alt}
               />
-              <div className="flex justify-around pt-8 pb-2">
+              <div className="flex justify-between pt-8 pb-2 gap-2 tab:flex-wrap phone:flex-col">
                 <div>
-                  <p className="text-sm">Project Name</p>
-                  <p className="text-white">{project.title}</p>
+                  <p className="text-sm whitespace-nowrap">Project Name</p>
+                  <p className="text-white whitespace-nowrap">
+                    {project.title}
+                  </p>
                 </div>
-                <div>
+                <div className="phone:hidden">
                   <p className="text-sm">Description</p>
                   <p className="text-white max-w-md">{project.clip}</p>
                 </div>
                 <div>
-                  <p className="text-sm">Service</p>
-                  <p className="text-white">{project.service}</p>
+                  <p className="text-sm phone:hidden">Service</p>
+                  <p
+                    className="text-white phone:text-sm phone:text-mono-grey"
+                    dangerouslySetInnerHTML={{ __html: project.service }}
+                  ></p>
                 </div>
-                <div>
-                  <p className="text-sm">Release Date</p>
+                <div className="phone:hidden">
+                  <p className="text-sm whitespace-nowrap">Release Date</p>
                   <p className="text-white">{project.releaseDate}</p>
                 </div>
               </div>

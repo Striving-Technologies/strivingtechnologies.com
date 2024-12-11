@@ -84,7 +84,7 @@ const Footer = () => {
 
   return (
     <footer className="pt-20 w-full">
-      <div className="w-full grid grid-cols-3 px-[4.5rem]">
+      <div className="w-full grid grid-cols-3 px-[4.5rem] gap-4 lg-tab:grid-cols-2 lg-tab:gap-y-20 tab:px-8 phone:px-4">
         <div className="h-full flex flex-col justify-between">
           <div>
             <h4 className="uppercase">Company</h4>
@@ -106,7 +106,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <p>
+          <p className="mt-5 phone:hidden">
             &copy; {new Date().getFullYear()} Striving Technologies. <br />
             All Rights Reserved
           </p>
@@ -114,13 +114,14 @@ const Footer = () => {
         <motion.div
           ref={reachOutRef}
           animate={reachOutControls}
+          className="lg-tab:order-3 lg-tab:col-span-full phone:mb-5"
         >
           <h3 className="uppercase mx-auto w-min whitespace-nowrap">
             Reach Out To Us
           </h3>
           <div className="overflow-hidden">
             <motion.p
-              className="nav-link text-3xl relative w-min whitespace-nowrap mx-auto text-white mt-5 hover:text-primary"
+              className="nav-link text-3xl relative w-min whitespace-nowrap mx-auto text-white mt-5 hover:text-primary phone:text-2xl"
               variants={animation}
             >
               <InteractiveLink href="tel:(+234) 0906 201 8396">
@@ -150,7 +151,7 @@ const Footer = () => {
             </p>
           </div>
         </motion.div>
-        <div className="flex justify-end">
+        <div className="flex justify-end lg-tab:justify-start">
           <div>
             <h4 className="uppercase">Socials</h4>
             <ul className="mt-5 flex flex-col gap-3">
@@ -173,6 +174,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
       <motion.div
         className="w-full mt-20 px-2 overflow-hidden"
         ref={logoRef}
@@ -187,6 +189,12 @@ const Footer = () => {
           variants={animation}
         />
       </motion.div>
+      <div className="px-4">
+        <p className="my-5 hidden phone:block">
+          &copy; {new Date().getFullYear()} Striving Technologies. All Rights
+          Reserved
+        </p>
+      </div>
     </footer>
   );
 };
