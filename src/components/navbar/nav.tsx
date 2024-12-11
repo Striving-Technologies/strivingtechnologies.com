@@ -114,6 +114,7 @@ export const MobileNav = (props: { show: boolean; close: () => void }) => {
                 href={link.href}
                 className="flex items-end"
                 wrapperType="link"
+                onClick={props.close}
               >
                 {link.label}
                 {link.extra && (
