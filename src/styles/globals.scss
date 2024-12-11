@@ -77,6 +77,14 @@ body {
   border-radius: 50%;
   pointer-events: none;
   transition: all 0.04s linear;
+
+  /* In case of touch-screen device,
+    setting image display to block.
+    Using @media to detect pointer 
+    accuracy */
+  @media (pointer: coarse), (pointer: fine) {
+    display: none;
+  }
 }
 
 .grey-gradient {
