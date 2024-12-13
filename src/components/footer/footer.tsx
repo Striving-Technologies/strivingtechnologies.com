@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { InteractiveLink } from "../shared";
 
-const MotionLink = motion(Image);
+const MotionLink = motion.create(Image);
 
 const Footer = () => {
   const companyLinks = [

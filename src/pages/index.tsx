@@ -7,7 +7,7 @@ import {
 import MainLayout from "@/components/mainlayout";
 import { AnimatedText, InteractiveLink } from "@/components/shared";
 import { ArrowIcon, BarcodeIcon } from "@/icons";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 import { useEffect } from "react";
 
@@ -25,9 +25,7 @@ const Home = () => {
 
   return (
     <MainLayout>
-      <Head>
-        <title>Home | StriTech</title>
-      </Head>
+      <NextSeo title="StriTech — Digital Product & Innovation Agency" />
       <div className="px-[4.5rem] py-20 min-h-screen flex flex-col justify-between overflow-hidden tab:px-8 phone:px-4">
         <div className="w-full flex justify-between tab:flex-grow">
           <section className="max-w-[500px] z-[2] w-full lg-tab:max-w-xs">
@@ -58,7 +56,7 @@ const Home = () => {
             />
           </div>
         </div>
-        <section className="flex w-full justify-between items-end flex-wrap gap-4">
+        <section className="flex w-full justify-between items-end flex-wrap gap-4 z-[2]">
           <div className="text-8xl lg-tab:text-7xl">
             <div className="-mb-6 lg-tab:mb-0">
               <h1 className="arapey-regular-italic italic text-secondary">
