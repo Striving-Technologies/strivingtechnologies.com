@@ -1,17 +1,17 @@
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
 const SEO = {
-  title: "Striving Technologies",
+  title: "StriTech — Digital Product & Innovation Agency",
   description:
-    "StriTech is a digital product and innovation agency focused on giving you extrinsic design and functional web and mobile applications.",
+    "At Striving Technologies, we provide excellent services in design consultation, user interface and experience design, software engineering, and Machine Learning / Artificial Intelligence to bring the brilliant ideas of forward-thinking clients to life.",
   openGraph: {
     type: "website",
     locale: "en_IE",
     url: "https://stritech.co/",
-    siteName: "Striving Technologies",
-    title: "Striving Technologies",
+    siteName: "StriTech — Digital Product & Innovation Agency",
+    title: "StriTech — Digital Product & Innovation Agency",
     description:
-      "StriTech is a digital product and innovation agency focused on giving you extrinsic design and functional web and mobile applications.",
+      "At Striving Technologies, we provide excellent services in design consultation, user interface and experience design, software engineering, and Machine Learning / Artificial Intelligence to bring the brilliant ideas of forward-thinking clients to life.",
     images: [
       {
         url: `${BASE_URL}/images/logo.png`,
