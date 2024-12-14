@@ -140,6 +140,7 @@ function ClientWorkPage({ foundWork }: { foundWork: IWork }) {
                       setSelectedImage(image);
                       modelCloseRef.current?.focus();
                     }}
+                    aria-label={`View ${image.alt} in modal`}
                   >
                     <Image
                       src={image.url}
@@ -168,7 +169,7 @@ function ClientWorkPage({ foundWork }: { foundWork: IWork }) {
                 ref={modelCloseRef}
               >
                 <CloseIcon className="w-10 h-auto" />
-                <span className="sr-only">Close Image</span>
+                <span className="sr-only">Close Image Modal</span>
               </button>
               <Image
                 src={selectedImage?.url || ""}
