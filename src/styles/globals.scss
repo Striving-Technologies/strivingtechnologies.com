@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Bruno+Ace&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000000;
+  --mono-grey: #999999;
+  --mono-grey-dark: #1a1a1a;
+  --primary: #ffc046;
+  --secondary: #fff7d4;
+  --gold: #c07f00;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  color: var(--mono-grey);
+  font-family: "Urbanist", serif;
+}
+
+// fonts
+.urbanist {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arapey-regular {
+  font-family: "Arapey", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arapey-regular-italic {
+  font-family: "Arapey", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.bruno-ace {
+  font-family: "Bruno Ace", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.mouse-follow {
+  position: fixed;
+  z-index: 100;
+  width: 30px;
+  height: 30px;
+  mix-blend-mode: difference;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: all 0.04s linear;
+
+  /* In case of touch-screen device,
+    setting image display to block.
+    Using @media to detect pointer 
+    accuracy */
+  @media (pointer: coarse), (pointer: none) {
+    display: none;
+  }
+}
+
+.grey-gradient {
+  background: linear-gradient(rgba(31, 31, 31, 1), rgba(31, 31, 31, 0));
+}
+
+.grey-gradient-reverse {
+  background: linear-gradient(rgba(31, 31, 31, 0), rgba(31, 31, 31, 1));
+}
+
+.grey-gradient-round {
+  background: linear-gradient(#1f1f1f, #000000, #1f1f1f);
+}
+
+.service-image {
+  animation: topDownOscillation 5s linear 0s infinite forwards;
+}
+
+@keyframes topDownOscillation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.input-default {
+  background: none;
+  border: rgba(153, 153, 153, 0.5) 1px solid;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+
+  &::placeholder {
+    color: rgba(153, 153, 153, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+    border: #fff 1px solid;
+  }
+}
