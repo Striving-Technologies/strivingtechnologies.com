@@ -49,7 +49,7 @@ function ClientWorkPage({ foundWork }: { foundWork: IWork }) {
           </h1>
         </MarginWrapper>
         <div
-          className="aspect-[10/3] bg-center bg-cover bg-no-repeat bg-fixed tab:aspect-[16/9]"
+          className="aspect-[10/3] bg-mono-grey-dark bg-center bg-cover bg-no-repeat bg-fixed tab:aspect-[16/9]"
           style={{
             backgroundImage: `url(${foundWork.images[0].url})`,
           }}
