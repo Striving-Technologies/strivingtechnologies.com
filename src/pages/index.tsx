@@ -71,6 +71,7 @@ const Home = () => {
           <div className="mt-20 ml-auto">
             <InteractiveLink
               href="/#contact"
+              wrapperType="link"
               className="px-4 py-3 text-xl flex items-center gap-4 rounded-full border border-white bg-black hover:bg-primary hover:border-black hover:text-black"
             >
               Let's connect
@@ -150,7 +151,7 @@ const Home = () => {
           <ProjectList />
           {/* <div className="flex justify-center">
             <InteractiveLink
-              href="/projects"
+              href="/client-work"
               className="px-4 py-3 text-xl flex items-center gap-4 rounded-full border w-min whitespace-nowrap border-white bg-black hover:bg-primary hover:border-black hover:text-black"
             >
               View More

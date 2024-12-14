@@ -19,12 +19,14 @@ export const E404 = () => {
         <div className="mt-10 flex justify-center gap-4">
           <InteractiveLink
             href="/"
+            wrapperType="link"
             className="px-4 py-3 flex items-center gap-4 rounded-full border w-min whitespace-nowrap border-white bg-black hover:bg-primary hover:border-black hover:text-black"
           >
             Go Home <span>🏠</span>
           </InteractiveLink>
           <InteractiveLink
             href="/client-work"
+            wrapperType="link"
             className="px-4 py-3 flex items-center gap-4 rounded-full border w-min whitespace-nowrap border-white bg-black hover:bg-primary hover:border-black hover:text-black"
           >
             Something cool <span>😎</span>

@@ -144,6 +144,7 @@ const Footer = () => {
             <p className="flex justify-center">
               <InteractiveLink
                 href="/#contact"
+                wrapperType="link"
                 className="px-4 py-3 flex gap-4 items-center max-w-min whitespace-nowrap rounded-full text-xl border border-white bg-black hover:bg-primary hover:border-black hover:text-black"
               >
                 Let's connect
