@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { InteractiveLink } from "../shared";
 
-const MotionLink = motion.create(Image);
+const MotionImage = motion.create(Image);
 
 const Footer = () => {
   const companyLinks = [
@@ -77,7 +77,7 @@ const Footer = () => {
     visible: {
       translateY: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.2,
       },
     },
   };
@@ -96,6 +96,7 @@ const Footer = () => {
                 >
                   <InteractiveLink
                     href={link.link}
+                    wrapperType={link.external ? undefined : "link"}
                     className="flex items-center uppercase gap-2"
                     target={link.external ? "_blank" : ""}
                     rel="noopener noreferrer"
@@ -180,7 +181,7 @@ const Footer = () => {
         ref={logoRef}
         animate={logoControls}
       >
-        <MotionLink
+        <MotionImage
           src="/images/logo-3x.png"
           width={2928}
           height={768}

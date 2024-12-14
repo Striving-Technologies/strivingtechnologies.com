@@ -82,7 +82,7 @@ body {
     setting image display to block.
     Using @media to detect pointer 
     accuracy */
-  @media (pointer: coarse), (pointer: fine) {
+  @media (pointer: coarse), (pointer: none) {
     display: none;
   }
 }

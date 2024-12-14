@@ -26,22 +26,22 @@ const Home = () => {
   return (
     <MainLayout>
       <NextSeo title="StriTech — Digital Product & Innovation Agency" />
-      <div className="px-[4.5rem] py-20 min-h-screen flex flex-col justify-between overflow-hidden tab:px-8 phone:px-4">
+      <div className="px-[4.5rem] py-20 min-h-screen flex flex-col justify-between overflow-hidden tab:px-8 sm-tab:pt-10 phone:px-4">
         <div className="w-full flex justify-between tab:flex-grow">
-          <section className="max-w-[500px] z-[2] w-full lg-tab:max-w-xs">
+          <section className="max-w-[500px] z-[2] w-full lg-tab:max-w-xs sm-tab:text-white">
             <p className="text-sm">
               “ At Striving Technologies, we see creativity as the driving force
               behind innovation. As a full-service creative agency, we transform
               forward-thinking ideas into extraordinary solutions.
             </p>
-            <p className="text-sm mt-2">
+            <p className="text-sm mt-2 sm-tab:mt-1">
               In developing a brand identity, creating a user-friendly website,
               or In our journey of crafting brand identities, designing
               user-friendly websites, and launching dynamic marketing campaigns,
               we invest every project with unwavering dedication and a spirited
               enthusiasm that inspires greatness. ”
             </p>
-            <div className="text-white italic mt-5">
+            <div className="text-white italic mt-5 sm-tab:mt-3">
               <p>Ochuko P</p>
               <p>Creative Director</p>
             </div>

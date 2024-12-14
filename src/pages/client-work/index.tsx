@@ -6,7 +6,15 @@ import { NextSeo } from "next-seo";
 function ClientWorkPage() {
   return (
     <MainLayout>
-      <NextSeo title="Client Work — StriTech" />
+      <NextSeo
+        title="Client Work — StriTech"
+        description="Discover our range of innovative products carefully crafted for each of our customers to unlock their potential. Each product is thoughtfully designed to deliver outstanding results."
+        openGraph={{
+          title: "Client Work — StriTech",
+          description:
+            "Discover our range of innovative products carefully crafted for each of our customers to unlock their potential. Each product is thoughtfully designed to deliver outstanding results.",
+        }}
+      />
       <section
         className="px-[4.5rem] py-20 tab:pt-10 tab:px-8 phone:px-4"
         id="work"

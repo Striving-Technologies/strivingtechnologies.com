@@ -1,5 +1,5 @@
 import { ArrowIcon } from "@/icons";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useRef, useState } from "react";
 import { InteractiveLink } from "../shared";
 
 export const ContactForm = () => {
@@ -10,6 +10,15 @@ export const ContactForm = () => {
     message: "",
   });
 
+  const [submitting, setSubmitting] = useState(false);
+
+  const phoneRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+
+  const phoneRegex =
+    /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,5}$/;
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -17,11 +26,69 @@ export const ContactForm = () => {
       ...form,
       [e.target.name]: e.target.value,
     });
+
+    if (e.target.name === "phone") {
+      phoneRef.current?.setCustomValidity("");
+    }
+    if (e.target.name === "email") {
+      emailRef.current?.setCustomValidity("");
+    }
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const validateFormValues = () => {
+    if (form.phone.length > 0) {
+      if (!phoneRegex.test(form.phone)) {
+        phoneRef.current?.setCustomValidity("Phone number wrongly formatted.");
+        return false;
+      } else {
+        phoneRef.current?.setCustomValidity("");
+      }
+    }
+    if (form.email.length > 0) {
+      if (!emailRegex.test(form.email)) {
+        emailRef.current?.setCustomValidity("Email wrongly formatted.");
+        return false;
+      } else {
+        emailRef.current?.setCustomValidity("");
+      }
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(form);
+    if (!validateFormValues()) return;
+
+    const data = {
+      service_id: "gmail",
+      template_id: "template_e374vch",
+      user_id: "user_OQyWiC5XbcdNYgj5nqbJU",
+      template_params: form,
+    };
+
+    try {
+      setSubmitting(true);
+
+      const response = await fetch(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (!response.ok || response.status !== 200) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -41,8 +108,8 @@ export const ContactForm = () => {
           className="input-default"
           name="email"
           placeholder="E-mail"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,5}$"
           required
+          ref={emailRef}
           onChange={handleChange}
         />
         <input
@@ -50,7 +117,7 @@ export const ContactForm = () => {
           name="phone"
           placeholder="Phone number"
           type="tel"
-          pattern="^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
+          ref={phoneRef}
           onChange={handleChange}
         />
       </div>
@@ -66,8 +133,9 @@ export const ContactForm = () => {
         <button
           className="input-default !w-min whitespace-nowrap flex items-center gap-4 !rounded-full phone:!w-full phone:justify-between hover:bg-primary hover:text-black focus:border-white"
           type="submit"
+          disabled={submitting}
         >
-          Let's connect
+          {submitting ? "Submitting..." : "Let's connect"}
           <ArrowIcon className="h-4 w-auto" />
         </button>
       </InteractiveLink>

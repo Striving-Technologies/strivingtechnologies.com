@@ -4,8 +4,6 @@
     "slug": "dev-ochuko-space",
     "title": "Ochuko 'Folio 24 — Creative Engineer",
     "clip": "A personal portfolio for a creative engineer. A place to showcase his work and tell his story.",
-    "color": "#DAD6CA",
-    "backgroundColor": "#111111",
     "images": [
       {
         "url": "/images/work/ochuko-space-mac.png",
@@ -38,7 +36,7 @@
         "alt": "Ochuko's Portfolio projects section"
       },
       {
-        "url": "/images/work/ochuko-space-writing.png",
+        "url": "/images/work/ochuko-space-writings.png",
         "width": 4000,
         "height": 2250,
         "alt": "Ochuko's Portfolio writing section"
@@ -58,24 +56,12 @@
     ],
     "tool": "Creative | Engineer | Portfolio",
     "service": "Web Engineering&nbsp;&nbsp;|&nbsp;&nbsp;Brand Identity",
-    "problem": "A small law firm needed to gain more clients. They needed a website where clients could gauge the experience and what they have to offer.",
-    "steps": [
-      [
-        "Every project deserves the right tools. We decided to use Next JS, framework know best for rendering static web pages."
-      ],
-      [
-        "We deisgned them a simple but catchy front page. We went for a dark theme because it's eye friendly and looks elite (the way a law firm should look).",
-        "We added an easily accessible navigation bar which links to all the major pages of the website."
-      ],
-      [
-        "Each page was straight to the point and easy to read. The law is often straight forward, so should the site",
-        "Next up was to use to make sure each page was responsive on mobile screens. We test it on various phone sizes to ensure consistency."
-      ],
-      [
-        "Finally we host the site on Netlify, which enables us to use the continuous development feature.",
-        "This means we can make changes to the site and have them automatically added to the already deployed site."
-      ]
-    ],
+    "problem": "A creative engineer faces the challenge of effectively communicating their unique blend of technical expertise and artistic innovation in a way that resonates with diverse audiences, including potential clients, collaborators, and employers. Without a strong personal brand or a visually compelling, user-friendly website, their professional identity may remain unclear, and opportunities to showcase their skills could be missed.",
+    "steps": {
+      "research": "Conducting thorough research is essential to create a website that authentically represents a creative engineer's unique blend of technical expertise and artistic innovation. \n\nWe identified target audiences, such as potential clients, collaborators, and employers, to understand their needs, preferences, and expectations. We also examined websites of similar professionals to identify effective design elements, content strategies, and gaps to differentiate the brand. Our engagement with the Ochuko also helped uncover his professional values, personality, and vision, ensuring the website reflects his authentic voice. Lastly we gathered data on user behaviour and preferences to prioritize intuitive navigation, accessibility, and an engaging user experience. \n\nThis research lays the foundation for a website that not only showcases the engineer's skills but also connects meaningfully with the intended audience.",
+      "design": "Designing the interface and interactions for a creative engineer's website focuses on blending functionality with creativity to reflect their unique identity. \n\nWe crafted an intuitive interface that ensures seamless navigation, guiding visitors to key information effortlessly. We used dynamic visuals, animations, and interactive elements to showcase the engineer's projects, processes, and personality in an engaging way. We also incorporated consistent color schemes, typography, and design elements that align with the engineer's personal brand. We ensured the website delivers an optimized experience across devices, from desktops to smartphones and added thoughtful interactions—such as hover effects, project filters, or animated transitions—that enhance user engagement without overwhelming functionality. \n\nThe result is an interface that communicates innovation, invites exploration, and leaves a lasting impression on visitors.",
+      "development": "Developing the interface and interactions for the creative engineer's website requires a meticulous approach to ensure the design vision is translated into a seamless, functional experience. \n\nWe utilised modern front-end technologies — React, Next.js, TailwindCSS — as well as asset optimisations to allow for fast load times and rendering speeds. We also integrated ReactThreeFibre and ThreeJS to work with the 3D elements utilised in the website to ensure smoothness on all types of devices. We added engaging interactions, such as hover effects, animations, and dynamic content displays, to make the website more immersive and user-friendly. \n\nTo ensure consistent behaviour and interaction we implemented strong coding practices and vigorous testing. We also worked with clean, modular code to allow for easy updates, scalability, and integration of new features; and we adhered to web accessibility guidelines (e.g., WCAG) to make the website inclusive for all users. \n\nThis development process ensures a polished, interactive website that aligns with the engineer's creative and technical prowess while delivering an exceptional user experience."
+    },
     "releaseDate": "January, 2024"
   },
   {
@@ -83,8 +69,6 @@
     "slug": "luxevilla28",
     "title": "Luxevilla28 — Hotel & Resort",
     "clip": "Telling the story of luxury for an upcoming hotel. Service at it's finest.",
-    "color": "#f9f9f9",
-    "backgroundColor": "#dca73a",
     "images": [
       {
         "url": "/images/work/luxevilla28-iphone.png",
@@ -101,23 +85,12 @@
     ],
     "tool": "Hotel & Resort | Website",
     "service": "Brand Identity&nbsp;&nbsp;|&nbsp;&nbsp;UI/UX Design&nbsp;&nbsp;|&nbsp;&nbsp;Web Engineering",
-    "problem": "An upcoming luxurious hotel needed to get customers for their opening night. They needed a space to tell their story and showcase their work.",
-    "steps": [
-      [
-        "The project was going to have a ton of images so we decided to use Next JS, framework know best for optimizing the rendering of static web pages."
-      ],
-      [
-        "We designed them a simple but elegant landing page. We went for a dark theme because it's easy on the eyes and looks elegant (just like our client).",
-        "We added an easily accessible navigation bar which links to all the major pages of the website."
-      ],
-      [
-        "Each page was well designed and unique. The hotel had a lot to say and we needed give the user that unique experience.",
-        "Next up was to use to make sure each page was responsive on mobile screens. We test it on various phone sizes to ensure consistency."
-      ],
-      [
-        "Finally we host the site on Vercel which is specially built to deploy and render NextJS applications efficiently."
-      ]
-    ],
+    "problem": "A luxury hotel must effectively convey its exclusivity, sophistication, and exceptional guest experience to stand out in a competitive market. Without a compelling brand identity and a state-of-the-art website, potential guests may overlook its offerings in favour of competitors. The absence of a unified branding strategy and a visually captivating, user-friendly website hinders the hotel's ability to engage prospective guests effectively.",
+    "steps": {
+      "research": "Conducting comprehensive research is crucial to create a website that reflects the hotel's elegance and appeals to its discerning clientele. We analysed the market and competitor websites to gain insights into industry standards and identify opportunities to differentiate the hotel's online presence. By understanding what competitors do well—and where they fall short—we positioned the website to stand out as a leader in hospitality. We conducted in-depth research into the target audience, focusing on their preferences, expectations, and online behaviors. This allowed us to craft a website experience that speaks directly to high-value guests seeking an exceptional and exclusive stay. \n\nWe immersed ourselves in the hotel's unique story, ambiance, and offerings to ensure the website authentically represents the luxury experience it provides. By capturing the essence of the brand, we created a platform that highlights its unique value propositions. We performed usability studies to understand user needs and behaviors. These insights informed the design and functionality, ensuring the website delivers an intuitive, seamless browsing experience that inspires confidence in booking a stay.",
+      "design": "Designing the interface and interactions for the hotel's website centers on creating a visually stunning and user-centric experience that reflects the brand's sophistication. We designed the website to create a visually stunning and user-centric experience that reflects the hotel's sophistication. High-quality imagery, refined typography, and a cohesive color palette were carefully chosen to convey elegance and exclusivity at every touchpoint. \n\nEvery design decision focused on making the journey as smooth and engaging as the stay itself. We incorporated immersive storytelling elements to bring the hotel's ambiance to life. Features like rich media galleries were designed to captivate visitors and transport them into the luxury experience from the moment they arrive on the site. We optimized the design for responsiveness, ensuring the website maintains its elegance and functionality across all devices. Whether viewed on a smartphone, tablet, or desktop, the site delivers a consistent and visually impressive experience.",
+      "development": "Developing the interface and interactions for the hotel's website focuses on delivering a seamless, high-performance digital experience that embodies sophistication. We developed the website's interface with responsive architecture to ensure it delivers a flawless experience across all devices and screen sizes. Modern front-end frameworks allowed us to maintain elegance and functionality as well as optimise load times and rendering speeds. \n\nWe implemented engaging interactive features to elevate the user experience. Smooth transitions, hover effects, and interactive media galleries were carefully coded to captivate visitors while highlighting the hotel's unique offerings in a dynamic and immersive way. The system was designed to be intuitive, guiding users effortlessly from exploration to confirmation, ensuring their journey is as smooth as their stay will be. We built the website with scalability and long-term maintenance in mind. \n\nClean, modular code allows for easy updates, feature enhancements, and future integrations, ensuring the platform evolves alongside the hotel's needs. We adhered to accessibility standards to make the website inclusive for all users. By meeting WCAG guidelines, we ensured every guest, regardless of ability, can enjoy the same high-quality digital experience."
+    },
     "releaseDate": "September, 2020"
   }
 ]

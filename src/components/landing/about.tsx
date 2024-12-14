@@ -8,7 +8,7 @@ export const AboutStats = () => {
     {
       count: "I.",
       title: "Years of Experience",
-      value: "6",
+      value: "4",
       className: "mt-20 sm-tab:mt-0",
       bgMedia: {
         url: "/images/about-experience.jpg",
