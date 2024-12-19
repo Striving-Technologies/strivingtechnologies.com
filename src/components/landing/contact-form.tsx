@@ -11,12 +11,13 @@ export const ContactForm = () => {
   });
 
   const [submitting, setSubmitting] = useState(false);
+  const [isSuccessful, setIsSuccessful] = useState(false);
 
   const phoneRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
 
   const phoneRegex =
-    /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+    /^(\+\d{1,3}\s?)?[\s.-]?\(?\d{3,4}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,5}$/;
 
   const handleChange = (
@@ -84,8 +85,20 @@ export const ContactForm = () => {
       if (!response.ok || response.status !== 200) {
         throw new Error(`Response status: ${response.status}`);
       }
+
+      setIsSuccessful(true);
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+      setTimeout(() => {
+        setIsSuccessful(false);
+      }, 5000);
     } catch (error) {
       console.error(error);
+      alert("An error occurred. Please try again later.");
     } finally {
       setSubmitting(false);
     }
@@ -101,6 +114,7 @@ export const ContactForm = () => {
         name="name"
         placeholder="Full Name"
         required
+        value={form.name}
         onChange={handleChange}
       />
       <div className="flex gap-4 phone:flex-col phone:gap-8">
@@ -110,6 +124,7 @@ export const ContactForm = () => {
           placeholder="E-mail"
           required
           ref={emailRef}
+          value={form.email}
           onChange={handleChange}
         />
         <input
@@ -118,6 +133,7 @@ export const ContactForm = () => {
           placeholder="Phone number"
           type="tel"
           ref={phoneRef}
+          value={form.phone}
           onChange={handleChange}
         />
       </div>
@@ -127,6 +143,7 @@ export const ContactForm = () => {
         placeholder="Message"
         required
         rows={4}
+        value={form.message}
         onChange={handleChange}
       />
       <InteractiveLink>
@@ -139,6 +156,11 @@ export const ContactForm = () => {
           <ArrowIcon className="h-4 w-auto" />
         </button>
       </InteractiveLink>
+      {isSuccessful && (
+        <p className="text-green-100 text-sm">
+          We've gotten your message. We'll get back to you soon!
+        </p>
+      )}
     </form>
   );
 };

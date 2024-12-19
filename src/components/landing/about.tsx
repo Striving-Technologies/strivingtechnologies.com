@@ -27,7 +27,7 @@ export const AboutStats = () => {
       },
     },
     {
-      count: "IV.",
+      count: "III.",
       title: "Satisfied Clients",
       value: "10",
       className: "mt-20 lg-tab:mt-0",
